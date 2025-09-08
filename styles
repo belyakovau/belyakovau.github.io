@@ -311,3 +311,43 @@ footer {
         padding: 8px;
     }
 }
+
+/* Стили для форм */
+#signup-form, #consult-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-form input, #consult-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+#consult-form input {
+    border: 1px solid #ddd;
+}
+
+/* Стили для текстовых элементов */
+.schedule-description, .section-description {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.schedule-notes {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.print-btn {
+    margin-top: 20px;
+}
+
+/* Контейнеры для разделов */
+.about-container, .services-container, .contact-container {
+    padding: 100px 0;
+}

@@ -10,65 +10,182 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <div class="logo">SportLife</div>
+            <div class="logo" id="home-link">SportLife</div>
             <nav>
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Расписание</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a class="nav-link active" data-section="home">Главная</a></li>
+                    <li><a class="nav-link" data-section="about">О нас</a></li>
+                    <li><a class="nav-link" data-section="services">Услуги</a></li>
+                    <li><a class="nav-link" data-section="schedule">Расписание</a></li>
+                    <li><a class="nav-link" data-section="contact">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Премиум фитнес клуб в вашем городе</h1>
-            <p>Достигайте своих целей с персональными тренировками, современным оборудованием и лучшими тренерами</p>
-            <div class="hero-buttons">
-                <a href="#form" class="btn">Записаться на пробное занятие</a>
-                <button class="btn btn-secondary" id="consultBtn">Получить консультацию</button>
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Премиум фитнес клуб в вашем городе</h1>
+                <p>Достигайте своих целей с персональными тренировками, современным оборудованием и лучшими тренерами</p>
+                <div class="hero-buttons">
+                    <a href="#form" class="btn">Записаться на пробное занятие</a>
+                    <button class="btn btn-secondary" id="consultBtn">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Наши возможности</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Тренажерный зал">
+                        <h3>Современный тренажерный зал</h3>
+                        <p>Оборудование последнего поколения от ведущих мировых производителей</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Групповые занятия">
+                        <h3>Групповые занятия</h3>
+                        <p>Йога, пилатес, функциональные тренировки и многое другое</p>
+                    </div>
+                    <div class="feature-card">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Бассейн">
+                        <h3>Бассейн и спа</h3>
+                        <p>25-метровый бассейн и зона спа с сауной и хамамом</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta" id="form">
+            <div class="container">
+                <h2>Готовы изменить свою жизнь?</h2>
+                <p>Заполните формы, и наш менеджер свяжется с вами для записи на пробное занятие</p>
+                <form id="signup-form">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Ваш телефон">
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Расписание занятий</h2>
+            <p class="schedule-description">Актуальное расписание групповых занятий на неделю</p>
+            
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                        <th>Суббота</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="time-column">07:00 - 08:00</td>
+                        <td>Йога</td>
+                        <td>Пилатес</td>
+                        <td>Йога</td>
+                        <td>Пилатес</td>
+                        <td>Йога</td>
+                        <td>Функциональный тренинг</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">09:00 - 10:00</td>
+                        <td>Аквааэробика</td>
+                        <td>Силовой тренинг</td>
+                        <td>Аквааэробика</td>
+                        <td>Силовой тренинг</td>
+                        <td>Аквааэробика</td>
+                        <td>Бокс</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">11:00 - 12:00</td>
+                        <td>Стретчинг</td>
+                        <td>Кроссфит</td>
+                        <td>Стретчинг</td>
+                        <td>Кроссфит</td>
+                        <td>Стретчинг</td>
+                        <td>Тайский бокс</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">13:00 - 14:00</td>
+                        <td>Зумба</td>
+                        <td>Тренажерный зал</td>
+                        <td>Зумба</td>
+                        <td>Тренажерный зал</td>
+                        <td>Зумба</td>
+                        <td>Йога</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">15:00 - 16:00</td>
+                        <td>Пилатес</td>
+                        <td>Аэробика</td>
+                        <td>Пилатес</td>
+                        <td>Аэробика</td>
+                        <td>Пилатес</td>
+                        <td>Плавание</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">17:00 - 18:00</td>
+                        <td>Кроссфит</td>
+                        <td>Йога</td>
+                        <td>Кроссфит</td>
+                        <td>Йога</td>
+                        <td>Кроссфит</td>
+                        <td>Силовой тренинг</td>
+                    </tr>
+                    <tr>
+                        <td class="time-column">19:00 - 20:00</td>
+                        <td>Бокс</td>
+                        <td>Функциональный тренинг</td>
+                        <td>Бокс</td>
+                        <td>Функциональный тренинг</td>
+                        <td>Бокс</td>
+                        <td>Зумба</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="schedule-notes">
+                <p>Примечание: Расписание может изменяться. Уточняйте у администратора.</p>
+                <button class="btn print-btn" onclick="window.print()">Распечатать расписание</button>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Наши возможности</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Тренажерный зал">
-                    <h3>Современный тренажерный зал</h3>
-                    <p>Оборудование последнего поколения от ведущих мировых производителей</p>
-                </div>
-                <div class="feature-card">
-                    <img src="https://images.unsplash.com/photo-1549060279-7e168fce7090?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Групповые занятия">
-                    <h3>Групповые занятия</h3>
-                    <p>Йога, пилатес, функциональные тренировки и многое другое</p>
-                </div>
-                <div class="feature-card">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Бассейн">
-                    <h3>Бассейн и спа</h3>
-                    <p>25-метровый бассейн и зона спа с сауной и хамамом</p>
-                </div>
-            </div>
+    <!-- Other sections -->
+    <section id="about" class="page-section">
+        <div class="container about-container">
+            <h2 class="section-title">О нашем клубе</h2>
+            <p class="section-description">Раздел находится в разработке</p>
         </div>
     </section>
-
-    <!-- Call to Action -->
-    <section class="cta" id="form">
-        <div class="container">
-            <h2>Готовы изменить свою жизнь?</h2>
-            <p>Заполните форму, и наш менеджер свяжется с вами для записи на пробное занятие</p>
-            <form id="signup-form" style="max-width: 500px; margin: 0 auto;">
-                <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 12px; margin: 10px 0; border: none; border-radius: 5px;">
-                <input type="tel" placeholder="Ваш телефон" style="width: 100%; padding: 12px; margin: 10px 0; border: none; border-radius: 5px;">
-                <button type="submit" class="btn" style="border: none; cursor: pointer;">Отправить заявку</button>
-            </form>
+    
+    <section id="services" class="page-section">
+        <div class="container services-container">
+            <h2 class="section-title">Наши услуги</h2>
+            <p class="section-description">Раздел находится в разработке</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="page-section">
+        <div class="container contact-container">
+            <h2 class="section-title">Контакты</h2>
+            <p class="section-description">Раздел находится в разработке</p>
         </div>
     </section>
 
@@ -93,46 +210,87 @@
             <span class="close">&times;</span>
             <h2>Консультация</h2>
             <p>Оставьте свои контактные данные, и наш специалист свяжется с вами для бесплатной консультации</p>
-            <form id="consult-form" style="max-width: 400px; margin: 0 auto;">
-                <input type="text" placeholder="Ваше имя" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-                <input type="tel" placeholder="Ваш телефон" style="width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;">
-                <button type="submit" class="btn" style="width: 100%;">Заказать консультацию</button>
+            <form id="consult-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="tel" placeholder="Ваш телефон">
+                <button type="submit" class="btn">Заказать консультацию</button>
             </form>
         </div>
     </div>
 
     <script>
-        // JavaScript для обработки формы
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо! Мы скоро свяжемся с вами для подтверждения записи.');
-            this.reset();
-        });
-        
-        // JavaScript для модального окна консультации
-        const modal = document.getElementById("consultModal");
-        const consultBtn = document.getElementById("consultBtn");
-        const closeBtn = document.querySelector(".close");
-        
-        consultBtn.addEventListener("click", function() {
-            modal.style.display = "flex";
-        });
-        
-        closeBtn.addEventListener("click", function() {
-            modal.style.display = "none";
-        });
-        
-        window.addEventListener("click", function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        // JavaScript для навигации между разделами
+        document.addEventListener('DOMContentLoaded', function() {
+            // Обработка навигационных ссылок
+            const navLinks = document.querySelectorAll('.nav-link');
+            const homeLink = document.getElementById('home-link');
+            const pageSections = document.querySelectorAll('.page-section');
+            
+            // Функция переключения разделов
+            function showSection(sectionId) {
+                // Скрыть все разделы
+                pageSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Показать выбранный раздел
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Обновить активную ссылку в навигации
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('data-section') === sectionId) {
+                        link.classList.add('active');
+                    }
+                });
             }
-        });
-        
-        document.getElementById('consult-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Спасибо за заявку! Наш специалист свяжется с вами в ближайшее время.');
-            this.reset();
-            modal.style.display = "none";
+            
+            // Добавить обработчики событий для навигационных ссылок
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
+            
+            // Обработчик для логотипа (возврат на главную)
+            homeLink.addEventListener('click', function() {
+                showSection('home');
+            });
+            
+            // JavaScript для обработки формы
+            document.getElementById('signup-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо! Мы скоро свяжемся с вами для подтверждения записи.');
+                this.reset();
+            });
+            
+            // JavaScript для модального окна консультации
+            const modal = document.getElementById("consultModal");
+            const consultBtn = document.getElementById("consultBtn");
+            const closeBtn = document.querySelector(".close");
+            
+            consultBtn.addEventListener("click", function() {
+                modal.style.display = "flex";
+            });
+            
+            closeBtn.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+            
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+            
+            document.getElementById('consult-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Спасибо за заявку! Наш специалист свяжется с вами в ближайшее время.');
+                this.reset();
+                modal.style.display = "none";
+            });
         });
     </script>
 </body>
